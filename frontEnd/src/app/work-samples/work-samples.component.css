@@ -1,0 +1,16 @@
+.container {
+  padding-top: 20px;
+}
+
+
+img{
+  padding-left: 10px;
+  padding-top: 20px;
+  width: 450px
+}
+
+mat-card {
+  width: fit-content;
+}
+
+

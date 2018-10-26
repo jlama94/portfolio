@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content class="containerForm">
+    <form [formGroup]="contactForm">
+      <mat-form-field>
+        <input  matInput placeholder="Enter your email" formControlName="from" required
+               [errorStateMatcher]="errorMatcher">
+        <!--Error area-->
+        <mat-error *ngIf="contactForm.get('from').hasError('required') || contactForm.get('from').hasError('email') || contactForm.get('from').hasError('pattern')">
+          Please enter a valid email address.
+        </mat-error>
+
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <input [errorStateMatcher]="errorMatcher" matInput placeholder="Telephone" formControlName="telephone" required>
+
+        <!--Error area-->
+        <mat-error *ngIf="contactForm.get('telephone').hasError('required')||
+          contactForm.get('telephone').hasError('pattern')">
+          Please enter a valid phone number.
+        </mat-error>
+
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <textarea  matInput placeholder="Message" formControlName="body" required></textarea>
+        <!--Error area-->
+        <mat-error *ngIf="contactForm.get('body').hasError('required')">
+          Please enter a message.
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button [disabled]="contactForm.invalid" mat-raised-button color="accent"
+            (click)="sendEmail(contactForm)" id="sendButton">Send message</button>
+    <button mat-raised-button color="warn" (click)="resetForm()" id="resetButton">Restart Message</button>
+  </mat-card-actions>
+</mat-card>
+
+

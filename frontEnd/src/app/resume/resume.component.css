@@ -1,0 +1,28 @@
+.container {
+  padding-top: 20px;
+}
+
+mat-card {
+  /*width: fit-content;*/
+  /*right: 0;*/
+  /*left : 0;*/
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*margin: auto;*/
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+
+address {
+  text-align: center;
+}
+
+#downloadMessage {
+  text-align: center;
+  /*width: fit-content;*/
+  background-color: lightyellow;
+}
