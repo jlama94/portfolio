@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import { RouterModule} from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -46,7 +45,6 @@ import { HighlighterDirective } from './highlighter.directive';
 /* External modules. */
 import { HighchartsChartModule } from "highcharts-angular";
 import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
-import { MessageSentComponent } from './message-sent/message-sent.component';
 
 
 
@@ -78,8 +76,7 @@ const routes = [
     ArtifactsDUComponent,
     PageNotFoundComponent,
     HighlighterDirective,
-    ArtifactInterviewComponent,
-    MessageSentComponent,
+    ArtifactInterviewComponent
   ],
   imports: [
     BrowserModule,
@@ -87,7 +84,6 @@ const routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes), // Configure the routes.
-    FontAwesomeModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,

@@ -29,12 +29,6 @@ export interface NotificationMessage {
 
 export class ContactMeComponent implements OnInit {
 
-  contactForm: FormGroup; // form
-  message: Message;
-
-  errorMatcher: ErrorStateMatcher;
-
-
   constructor(private service: PortfolioService) {}
 
   // onInit of this component instantiate the FormGroup.
@@ -45,34 +39,5 @@ export class ContactMeComponent implements OnInit {
         $("mat-card").slideDown("slow");
       }
     });
-    this.contactForm = new FormGroup ({
-      from: new FormControl('', [Validators.required, Validators.email, Validators.pattern('^(([^<>()\\[\\]\\.,;:\\s@\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\\]\\.,;:\\s@\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\"]{2,})$')]),
-      // telephone: new FormControl('',[Validators.pattern('^(\\+\\d{1,3}[- ]?)?\\d{10}$')]),
-      telephone: new FormControl('', Validators.required),
-      body: new FormControl('', [Validators.required])
-    });
-    this.errorMatcher = new ErrorStateMatcher();
-  }
-
-
-  resetForm() {
-    this.contactForm.reset();
-  }
-
-  /**
-   *
-   * @param form
-   */
-  sendEmail(form: FormGroup) {
-    this.message = new Message();
-    this.message = form.value;
-    this.service.sendEmail(this.message).subscribe((observer: Message) => {
-    }, (error) => {
-      if (error) {
-        console.log (error.status + ' ' + error);
-      }
-    });
-    alert("Your message was sent!");
-    this.contactForm.reset();
   }
 }
