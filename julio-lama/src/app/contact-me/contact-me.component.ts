@@ -4,7 +4,6 @@ import { PortfolioService} from '../services/portfolio.service';
 import { Message } from './message';
 import { ErrorStateMatcher, MatDialog, MatDialogRef} from '@angular/material';
 import * as $ from "jquery";
-import {MessageSentComponent} from "../message-sent/message-sent.component";
 
 
 /* A class that implements ErrorStateMatcher */
