@@ -26,7 +26,7 @@ export class ArtifactsDUComponent implements OnInit {
    * Goes back to project page.
    */
   goToProjects() {
-    this.router.navigateByUrl("/samples")
+    this.router.navigateByUrl("/projects")
   }
 }
 

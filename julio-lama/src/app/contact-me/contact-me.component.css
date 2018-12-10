@@ -1,13 +1,6 @@
 mat-card {
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left : 0;
-  margin: auto;
+  width: fit-content;
 }
-.containerForm > * {
+div {
   padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }

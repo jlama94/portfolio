@@ -25,6 +25,7 @@ import { MatSidenavModule} from '@angular/material';
 import { MatListModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
 import { MatDividerModule} from '@angular/material';
 import { MatDialogModule} from "@angular/material/dialog";
+import { MatGridListModule} from "@angular/material";
 
 
 /* My portfolio components & services. */
@@ -55,10 +56,10 @@ const routes = [
   { path: 'about', component: AboutMeComponent},
   { path: 'resume', component: ResumeComponent},
   { path: 'contact', component: ContactMeComponent},
-  { path: 'samples', component: WorkSamplesComponent},
+  { path: 'projects', component: WorkSamplesComponent},
   // { path: 'about-this-site', component: AboutSiteComponent},
-  { path: 'samples/depaulApp-members', component: ArtifactsDUComponent},
-  { path: 'samples/interview', component: ArtifactInterviewComponent},
+  { path: 'projects/depaulApp-members', component: ArtifactsDUComponent},
+  { path: 'projects/interview', component: ArtifactInterviewComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
@@ -103,7 +104,8 @@ const routes = [
     MatSortModule,
     MatDividerModule,
     HighchartsChartModule,
-    MatDialogModule
+      MatDialogModule,
+      MatGridListModule
   ],
   providers: [PortfolioService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
