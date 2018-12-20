@@ -11,12 +11,7 @@ export class AboutMeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(document).ready(function () {
-      $(".container").hide();
-      if ($(".container").is(":hidden")) {
-        $(".container").slideDown("slow");
-      }
-    });
+
   }
 
 }

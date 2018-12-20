@@ -1,57 +1,64 @@
 <div class="container">
-  <mat-card id="depaulCard">
-    <!--<img mat-card-image="" src="../../assets/du.png">-->
-    <mat-card-title>Senior Capstone</mat-card-title>
-    <mat-card-subtitle>Description</mat-card-subtitle>
-    <mat-card-content>
-      <p>Students will be provided with experience in team design, implementation and
-        testing of a large software project. <br/><em>PREREQUISITE(S):</em> CSC 301 or CSC 383 or
-        CSC 393 or ISM 360 Senior Year (The main prereq).
-      </p>
-      <!--My Directive for messages!-->
-      <div appMessage=""></div>
-    </mat-card-content>
-    <mat-card-actions>
-      <button id="teamButton" mat-raised-button color="accent" (click)="goToMembers()">Team</button>
-      <button id="checkAppButton" mat-raised-button color="warn" (click)="goToDUapp()">Check App</button>
-    </mat-card-actions>
-    <mat-spinner></mat-spinner>
-  </mat-card>
-</div>
-<br/>
+  <div fxLayout="column" fxLayoutGap="15px">
 
-<!--<div class="container">-->
-  <!--<mat-card id="interviewCard">-->
-    <!--<mat-card-title>-->
-      <!--Software Engineer II Interview-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-subtitle>-->
-      <!--Description-->
-    <!--</mat-card-subtitle>-->
-    <!--<mat-card-content>-->
-      <!--<p>This is an interview I had with Jeffrey Taksas, Software Engineer II at Expedia Group.<br/>-->
-        <!--The purpose of this interview was for me to get some knowledge about how things are once you get in the industry.</p>-->
-    <!--</mat-card-content>-->
-    <!--<mat-card-actions>-->
-      <!--<button mat-raised-button color="accent" (click)="goToInterview()">Check Interview</button>-->
-    <!--</mat-card-actions>-->
-  <!--</mat-card>-->
-<!--</div>-->
-<!--<br/>-->
-<!--<div class="container">-->
-  <!--<mat-card id="shapesCard">-->
-    <!--<mat-card-title>-->
-      <!--Shapes-->
-    <!--</mat-card-title>-->
-    <!--<mat-card-subtitle>-->
-      <!--Description-->
-    <!--</mat-card-subtitle>-->
-    <!--<mat-card-content>-->
-      <!--<p>The purpose of this small project was for me to get familiar with <a href="https://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm">JavaFX</a>-->
-        <!--and to learn the <a href="https://en.wikipedia.org/wiki/Composite_pattern">Composite</a> design pattern.<br/>-->
-      <!--The project can be found on my <a href="https://github.com/jlama94/SquaresAndCircles/tree/master">Github profile</a>. <br/>-->
-      <!--Here is a small picture of how it looks like when it is running: <br/></p>-->
-      <!--<img mat-card-xl-image="" src="../../assets/shapes.png">-->
-    <!--</mat-card-content>-->
-  <!--</mat-card>-->
-<!--</div>-->
+    <!--Senior capstone card-->
+    <mat-card fxFlexFill>
+      <mat-card-title>Senior Capstone</mat-card-title>
+      <mat-card-subtitle>Description</mat-card-subtitle>
+      <mat-card-content>
+        <p>
+          Students will be provided with experience in team design, implementation and testing of a large
+          software project. <br/>
+          <em>PREREQUISITE(S):</em> CSC 301 or CSC 383 or CSC 393 or ISM 360 Senior Year (The main prereq).
+        </p>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutGap="15px">
+        <button mat-stroked-button color="accent" (click)="goToMembers()">Team members</button>
+        <button mat-stroked-button color="warn" (click)="goToDUapp()"> Visit site</button>
+      </mat-card-actions>
+      <div appMessage=""></div>
+    </mat-card>
+
+    <!--News application card -->
+    <mat-card fxFlexFill>
+      <mat-card-title>The Guardian News</mat-card-title>
+      <mat-card-subtitle>Description</mat-card-subtitle>
+      <mat-card-content>
+        <p>A small application that uses <a href="https://www.theguardian.com/uk-news">The Guardian</a> API.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-stroked-button color="warn" href="https://theguardian.herokuapp.com/#/home">Visit site</a>
+      </mat-card-actions>
+      <div appMessage=""></div>
+    </mat-card>
+
+    <!--Sweets & coffee card-->
+    <mat-card fxFlexFill>
+      <mat-card-title>Sweets & Coffee</mat-card-title>
+      <mat-card-subtitle>Description</mat-card-subtitle>
+      <mat-card-content>
+        <p>The intention was to apply object-oriented techniques in the design and development of software systems for enterprise applications.<br/>
+          Topics include component architecture, such as Java Beans and Enterprise Java Beans, GUI components, such as Swing, database connectivity and object repositories, server application integration using technologies such as servlets, Java Server Pages, JDBC and RMI, security and internationalization.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a href="https://github.com/jlama94/coffeeShop"
+           mat-stroked-button color="warn"> View on GitHub</a>
+      </mat-card-actions>
+    </mat-card>
+
+    <!--My Portfolio card-->
+    <mat-card fxFlexFill>
+      <mat-card-title>Julio Lama</mat-card-title>
+      <mat-card-subtitle>Description</mat-card-subtitle>
+      <mat-card-content>
+        <p>My personal portfolio built with Angular. It is this site.</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-stroked-button color="warn" href="https://jlama94.github.io/portfolio/#/home">Visit site</a>
+      </mat-card-actions>
+    </mat-card>
+    <br/>
+  </div>
+</div>

@@ -9,6 +9,10 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 
+// For rearranging  nodes
+///https://tburleson-layouts-demos.firebaseapp.com/#/docs
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 /* Angular Material modules. */
 import { MatToolbarModule} from '@angular/material';
@@ -104,8 +108,9 @@ const routes = [
     MatSortModule,
     MatDividerModule,
     HighchartsChartModule,
-      MatDialogModule,
-      MatGridListModule
+    MatDialogModule,
+    MatGridListModule,
+    FlexLayoutModule
   ],
   providers: [PortfolioService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

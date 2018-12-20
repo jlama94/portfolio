@@ -20,12 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    $(document).ready(function () {
-      $(".container").hide();
-      if ( $(".container").is(":hidden")) {
-        $(".container").slideDown("slow");
-      }
-    });
+
     this.lastModified = new Date(document.lastModified);
   }
 

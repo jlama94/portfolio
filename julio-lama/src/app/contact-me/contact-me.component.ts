@@ -30,13 +30,7 @@ export class ContactMeComponent implements OnInit {
 
   constructor(private service: PortfolioService) {}
 
-  // onInit of this component instantiate the FormGroup.
   ngOnInit(): void {
-    $(document).ready(function () {
-      $("mat-card").hide();
-      if ( $("mat-card").is(":hidden")) {
-        $("mat-card").slideDown("slow");
-      }
-    });
+
   }
 }
