@@ -24,7 +24,6 @@
             ],
             "styles": [
               {
-//                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
                 "input": "src/julio-theme.scss"
               },
               "node_modules/bootstrap/dist/css/bootstrap.css",
