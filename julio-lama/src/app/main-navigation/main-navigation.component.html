@@ -6,12 +6,14 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary"></mat-toolbar>
+    <mat-toolbar color="primary">
+      <span><a routerLink="/home" style="color: white; text-decoration: none">Julio Lama</a></span>
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home" routerLinkActive="youAreHere">Home</a>
       <a mat-list-item routerLink="/about" routerLinkActive="youAreHere">About me</a>
       <a mat-list-item routerLink="/resume" routerLinkActive="youAreHere">Resume</a>
-      <a mat-list-item routerLink="/contact" routerLinkActive="youAreHere">Contact me</a>
+      <a mat-list-item routerLink="/contact" routerLinkActive="youAreHere">Contact</a>
       <a mat-list-item routerLink="/projects" routerLinkActive="youAreHere">Projects</a>
       <!--<a mat-list-item routerLink="/about-this-site">About this site</a>-->
     </mat-nav-list>
@@ -27,7 +29,7 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <!--Instead of href, in Angular you use "routerLink"-->
-      <span><a routerLink="/home" style="color: white; text-decoration: none">Julio Lama</a></span>
+      <!--<span><a routerLink="/home" style="color: white; text-decoration: none">Julio Lama</a></span>-->
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
