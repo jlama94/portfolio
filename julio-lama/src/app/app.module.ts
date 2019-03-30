@@ -50,7 +50,8 @@ import { HighlighterDirective } from './highlighter.directive';
 /* External modules. */
 import { HighchartsChartModule } from "highcharts-angular";
 import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
-
+// For embedding my Resume.pdf
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 
@@ -110,7 +111,8 @@ const routes = [
     HighchartsChartModule,
     MatDialogModule,
     MatGridListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PdfViewerModule
   ],
   providers: [PortfolioService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

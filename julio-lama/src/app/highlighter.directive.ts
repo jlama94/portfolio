@@ -9,7 +9,7 @@ export class HighlighterDirective implements OnInit {
   myMessage;
 
   ngOnInit(): void {
-    this.myMessage = ` * It takes 30 seconds for the application to load.
+    this.myMessage = ` Takes 30 seconds for the application to load.
     It is using free Dynos and hosted for free on Heroku.`;
 
     this.render.setStyle( this.el.nativeElement, 'width', 'fit-content');

@@ -2,19 +2,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-mat-card {
-  /*width: fit-content;*/
-  /*right: 0;*/
-  /*left : 0;*/
-  /*top: 0;*/
-  /*bottom: 0;*/
-  /*margin: auto;*/
-}
-
 img {
   height: 30px;
   width: 30px;
+}
+
+div {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
