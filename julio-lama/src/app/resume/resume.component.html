@@ -1,5 +1,6 @@
 <div>
-  <pdf-viewer [src]="urlPath" [render-text]="true" style="display:block" fit-to-page="true" original-size="false"
+  <mat-progress-bar  [hidden]="isHidden" [value]="value" mode="buffer" color="warn"></mat-progress-bar>
+  <pdf-viewer (on-progress)="onProgress($event)" [src]="urlPath" [render-text]="true" style="display:block" fit-to-page="true" original-size="false"
   autoresize="true">
   </pdf-viewer>
 </div>
@@ -7,3 +8,4 @@
 <div align="center">
   <a mat-stroked-button color="accent" href="./assets/Resume.pdf">Download Resume</a>
 </div>
+
