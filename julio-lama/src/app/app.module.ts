@@ -4,14 +4,13 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
-import { RouterModule} from '@angular/router';
 import { ReactiveFormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 
 // For rearranging  nodes
 ///https://tburleson-layouts-demos.firebaseapp.com/#/docs
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule} from '@angular/flex-layout';
 
 
 /* Angular Material modules. */
@@ -53,21 +52,8 @@ import { HighchartsChartModule } from "highcharts-angular";
 import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
 // For embedding my Resume.pdf
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { AppRoutingModule} from "./app-routing.module";
 
-
-
-const routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},  // If path is empty; the default route.
-  { path: 'home', component: HomeComponent},
-  { path: 'about', component: AboutMeComponent},
-  { path: 'resume', component: ResumeComponent},
-  { path: 'contact', component: ContactMeComponent},
-  { path: 'projects', component: WorkSamplesComponent},
-  // { path: 'about-this-site', component: AboutSiteComponent},
-  { path: 'projects/depaulApp-members', component: ArtifactsDUComponent},
-  { path: 'projects/interview', component: ArtifactInterviewComponent},
-  { path: '**', component: PageNotFoundComponent}
-];
 
 @NgModule({
   declarations: [
@@ -90,7 +76,6 @@ const routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes), // Configure the routes.
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -113,7 +98,8 @@ const routes = [
     MatDialogModule,
     MatGridListModule,
     FlexLayoutModule,
-    PdfViewerModule
+    PdfViewerModule,
+    AppRoutingModule
   ],
   providers: [PortfolioService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
