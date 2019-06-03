@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap} from "@angular/router";
 
 /* External imports*/
-import * as $ from "jquery";
+import {PortfolioService} from '../services/portfolio.service';
+import {RepositoryGitHub} from '../models/repository';
 
 @Component({
   selector: 'app-work-samples',
@@ -12,13 +13,20 @@ import * as $ from "jquery";
 
 export class WorkSamplesComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  repoArray: RepositoryGitHub[] = new Array();
+
+  constructor(public router: Router,
+              private activatedRoute: ActivatedRoute,
+              private service: PortfolioService) { }
 
   routetoDU = "https://depaulapp.herokuapp.com/#/";
 
 
   ngOnInit() {
-
+    this.activatedRoute.data.subscribe( (data: {Repository: RepositoryGitHub[]} ) => {
+      this.repoArray = data.Repository;
+      console.log(this.repoArray);
+    });
   }
 
   /**

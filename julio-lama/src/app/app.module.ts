@@ -53,6 +53,8 @@ import { ArtifactInterviewComponent } from './artifact-interview/artifact-interv
 // For embedding my Resume.pdf
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AppRoutingModule} from "./app-routing.module";
+import {GithubResolverService} from './services/github-resolver.service';
+
 
 
 @NgModule({
@@ -101,7 +103,7 @@ import { AppRoutingModule} from "./app-routing.module";
     PdfViewerModule,
     AppRoutingModule
   ],
-  providers: [PortfolioService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [PortfolioService, GithubResolverService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

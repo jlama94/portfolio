@@ -1,13 +1,14 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent} from "./home/home.component";
-import { AboutMeComponent} from "./about-me/about-me.component";
-import { ResumeComponent} from "./resume/resume.component";
-import { ContactMeComponent} from "./contact-me/contact-me.component";
-import { WorkSamplesComponent} from "./work-samples/work-samples.component";
-import { ArtifactsDUComponent} from "./artifacts-du/artifacts-du.component";
-import { ArtifactInterviewComponent} from "./artifact-interview/artifact-interview.component";
-import { PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import { HomeComponent} from './home/home.component';
+import { AboutMeComponent} from './about-me/about-me.component';
+import { ResumeComponent} from './resume/resume.component';
+import { ContactMeComponent} from './contact-me/contact-me.component';
+import { WorkSamplesComponent} from './work-samples/work-samples.component';
+import { ArtifactsDUComponent} from './artifacts-du/artifacts-du.component';
+import { ArtifactInterviewComponent} from './artifact-interview/artifact-interview.component';
+import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { GithubResolverService} from './services/github-resolver.service';
 
 
 const routes: Routes = [
@@ -16,9 +17,8 @@ const routes: Routes = [
   { path: 'about', component: AboutMeComponent},
   { path: 'resume', component: ResumeComponent},
   { path: 'contact', component: ContactMeComponent},
-  { path: 'projects', component: WorkSamplesComponent, children: [
-      {path: 'dePaulApplication-members', component: ArtifactsDUComponent}
-    ]},
+  { path: 'projects', component: WorkSamplesComponent, children: [ {path: 'depaul-application-members', component: ArtifactsDUComponent}]},
+  // { path: 'projects', component: WorkSamplesComponent, resolve: { Repository: GithubResolverService}, children: [{path: 'dePaulApplication-members', component: ArtifactsDUComponent}]},
   // { path: 'about-this-site', component: AboutSiteComponent},
   { path: 'projects/depaulApp-members', component: ArtifactsDUComponent},
   { path: 'projects/interview', component: ArtifactInterviewComponent},

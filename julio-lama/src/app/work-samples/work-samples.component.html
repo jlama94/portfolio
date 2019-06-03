@@ -1,9 +1,9 @@
 <div class="container">
-  <div fxLayout="column" fxLayoutGap="15px">
 
+  <div fxLayout="column" fxLayoutGap="15px" *ngIf="router.url != '/projects/depaul-application-members'">
     <!--Senior capstone card-->
     <mat-card fxFlexFill>
-      <mat-card-title>Senior Capstone</mat-card-title>
+      <mat-card-title>DePaul App - Senior Capstone</mat-card-title>
       <mat-card-subtitle>Description</mat-card-subtitle>
       <mat-card-content>
         <p>
@@ -13,7 +13,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutGap="15px">
-        <button mat-stroked-button color="accent" (click)="goToMembers()">Team members</button>
+        <!--<button mat-stroked-button color="accent" (click)="goToMembers()">Team members</button>-->
+        <a routerLink="depaul-application-members" class="mat-stroked-button">Team members</a>
         <button mat-stroked-button color="warn" (click)="goToDUapp()"> Visit site</button>
       </mat-card-actions>
       <div appMessage=""></div>
@@ -111,10 +112,31 @@
         <a mat-stroked-button color="warn" href="https://github.com/jlama94/MyChicagoPlanner">View on GitHub</a>
       </mat-card-actions>
     </mat-card>
-
     <br/>
   </div>
 </div>
+<!-- This will render the DePaul team members component -->
+<router-outlet></router-outlet>
+<!-- Github Repositories fetched from the GitHub API. -->
+<!--<div class="container" fxLayout="column" fxLayoutGap="15px">-->
+  <!--<div class="jumbotron">-->
+    <!--<h4 align="center">GitHub Repositories</h4>-->
+  <!--</div>-->
+  <!--<div *ngFor="let repo of repoArray">-->
+    <!--<mat-card fxFlexFill>-->
+      <!--<mat-card-title>{{repo.name}}</mat-card-title>-->
+      <!--<mat-card-subtitle>Description</mat-card-subtitle>-->
+      <!--<mat-card-content>-->
+        <!--<p>{{repo.description}}</p>-->
+      <!--</mat-card-content>-->
+      <!--<mat-card-actions>-->
+        <!--<p><strong>Language:</strong> {{repo.language}}</p>-->
+        <!--<p><a mat-stroked-button color="warn" href="{{repo.url}}">Repository URL</a></p>-->
+      <!--</mat-card-actions>-->
+    <!--</mat-card>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<br>-->
 <div align="center" style="padding-bottom: 20px">
-  <a mat-stroked-button color="primary" href="https://github.com/jlama94?tab=repositories">Check repositories on GitHub</a>
+  <a mat-stroked-button color="primary" href="https://github.com/jlama94">Go to GitHub</a>
 </div>
