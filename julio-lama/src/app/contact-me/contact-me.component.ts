@@ -3,7 +3,6 @@ import { FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@
 import { PortfolioService} from '../services/portfolio.service';
 import { Message } from './message';
 import { ErrorStateMatcher, MatDialog, MatDialogRef} from '@angular/material';
-import * as $ from "jquery";
 
 
 /* A class that implements ErrorStateMatcher */

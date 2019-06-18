@@ -1,6 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { NavigationEnd, Router} from "@angular/router";
-import * as $ from "jquery";
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,7 @@ export class HomeComponent implements OnInit {
         (<any> window).ga ('set', 'page', event.urlAfterRedirects);
         (<any> window).ga('send', 'pageview');
       }
-    })
+    });
   }
 
   ngOnInit() {

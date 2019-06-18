@@ -9,7 +9,7 @@ import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
 
 // For rearranging  nodes
-///https://tburleson-layouts-demos.firebaseapp.com/#/docs
+// https://tburleson-layouts-demos.firebaseapp.com/#/docs
 import { FlexLayoutModule} from '@angular/flex-layout';
 
 
@@ -27,8 +27,8 @@ import { MatProgressBarModule} from '@angular/material';
 import { MatSidenavModule} from '@angular/material';
 import { MatListModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
 import { MatDividerModule} from '@angular/material';
-import { MatDialogModule} from "@angular/material/dialog";
-import { MatGridListModule} from "@angular/material";
+import { MatDialogModule} from'@angular/material/dialog';
+import { MatGridListModule} from '@angular/material';
 
 
 
@@ -48,12 +48,15 @@ import { MainNavigationComponent } from './main-navigation/main-navigation.compo
 import { HighlighterDirective } from './highlighter.directive';
 
 /* External modules. */
-import { HighchartsChartModule } from "highcharts-angular";
-import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
+import { TranslateModule} from '@ngx-translate/core';
 // For embedding my Resume.pdf
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { AppRoutingModule} from "./app-routing.module";
-import {GithubResolverService} from './services/github-resolver.service';
+
+
+
+import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
+import { AppRoutingModule} from './app-routing.module';
+import { GithubResolverService} from './services/github-resolver.service';
 
 
 
@@ -75,6 +78,7 @@ import {GithubResolverService} from './services/github-resolver.service';
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
@@ -96,7 +100,6 @@ import {GithubResolverService} from './services/github-resolver.service';
     MatPaginatorModule,
     MatSortModule,
     MatDividerModule,
-    HighchartsChartModule,
     MatDialogModule,
     MatGridListModule,
     FlexLayoutModule,
