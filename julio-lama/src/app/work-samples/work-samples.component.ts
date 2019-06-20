@@ -25,7 +25,6 @@ export class WorkSamplesComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe( (data: {Repository: RepositoryGitHub[]} ) => {
       this.repoArray = data.Repository;
-      console.log(this.repoArray);
     });
   }
 
