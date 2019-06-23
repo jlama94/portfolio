@@ -13,9 +13,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutGap="15px">
-        <!--<button mat-stroked-button color="accent" (click)="goToMembers()">Team members</button>-->
         <a routerLink="depaul-application-members" class="mat-stroked-button">Team members</a>
-        <button mat-stroked-button color="warn" (click)="goToDUapp()"> Visit site</button>
+        <a href="https://depaulapp.herokuapp.com" class="mat-stroked-button">Visit site</a>
       </mat-card-actions>
       <div appMessage=""></div>
     </mat-card>
@@ -119,22 +118,22 @@
 <router-outlet></router-outlet>
 <!-- Github Repositories fetched from the GitHub API. -->
 <!--<div class="container" fxLayout="column" fxLayoutGap="15px">-->
-  <!--<div class="jumbotron">-->
-    <!--<h4 align="center">GitHub Repositories</h4>-->
-  <!--</div>-->
-  <!--<div *ngFor="let repo of repoArray">-->
-    <!--<mat-card fxFlexFill>-->
-      <!--<mat-card-title>{{repo.name}}</mat-card-title>-->
-      <!--<mat-card-subtitle>Description</mat-card-subtitle>-->
-      <!--<mat-card-content>-->
-        <!--<p>{{repo.description}}</p>-->
-      <!--</mat-card-content>-->
-      <!--<mat-card-actions>-->
-        <!--<p><strong>Language:</strong> {{repo.language}}</p>-->
-        <!--<p><a mat-stroked-button color="warn" href="{{repo.url}}">Repository URL</a></p>-->
-      <!--</mat-card-actions>-->
-    <!--</mat-card>-->
-  <!--</div>-->
+<!--<div class="jumbotron">-->
+<!--<h4 align="center">GitHub Repositories</h4>-->
+<!--</div>-->
+<!--<div *ngFor="let repo of repoArray">-->
+<!--<mat-card fxFlexFill>-->
+<!--<mat-card-title>{{repo.name}}</mat-card-title>-->
+<!--<mat-card-subtitle>Description</mat-card-subtitle>-->
+<!--<mat-card-content>-->
+<!--<p>{{repo.description}}</p>-->
+<!--</mat-card-content>-->
+<!--<mat-card-actions>-->
+<!--<p><strong>Language:</strong> {{repo.language}}</p>-->
+<!--<p><a mat-stroked-button color="warn" href="{{repo.url}}">Repository URL</a></p>-->
+<!--</mat-card-actions>-->
+<!--</mat-card>-->
+<!--</div>-->
 <!--</div>-->
 <!--<br>-->
 <div align="center" style="padding-bottom: 20px">

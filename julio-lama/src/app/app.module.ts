@@ -51,7 +51,9 @@ import { HighlighterDirective } from './highlighter.directive';
 import { TranslateModule} from '@ngx-translate/core';
 // For embedding my Resume.pdf
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-
+// For Analytics stuff.
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 
 import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
@@ -104,9 +106,11 @@ import { GithubResolverService} from './services/github-resolver.service';
     MatGridListModule,
     FlexLayoutModule,
     PdfViewerModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Angulartics2Module.forRoot()
   ],
   providers: [PortfolioService, GithubResolverService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+

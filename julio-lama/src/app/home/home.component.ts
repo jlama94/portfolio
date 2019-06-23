@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { NavigationEnd, Router} from "@angular/router";
+import { NavigationEnd, Router} from '@angular/router';
+import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +8,18 @@ import { NavigationEnd, Router} from "@angular/router";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  lastModified: Date;
-
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private googleAnalytics: Angulartics2GoogleAnalytics) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         (<any> window).ga ('set', 'page', event.urlAfterRedirects);
         (<any> window).ga('send', 'pageview');
       }
     });
+    this.googleAnalytics.startTracking();
   }
 
   ngOnInit() {
-
-    this.lastModified = new Date(document.lastModified);
   }
 
 }
