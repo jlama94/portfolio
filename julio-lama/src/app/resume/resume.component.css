@@ -12,6 +12,10 @@ div {
   margin-bottom: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: mediumpurple;
+}
 
 address {
   text-align: center;
