@@ -1,16 +1,17 @@
-mat-card-actions {
-  margin: auto;
+/*
+  container size: fit the content inside it.
+  align-items: to the center.
+  margin-top: space on top of the container -> 30px.
+ */
+.container {
+  width: fit-content;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 mat-card {
   width: fit-content;
-}
-
-div {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 img {

@@ -26,7 +26,6 @@
               {
                 "input": "src/julio-theme.scss"
               },
-              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ]
           },

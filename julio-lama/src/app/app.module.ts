@@ -47,17 +47,24 @@ import { PortfolioService} from './services/portfolio.service';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { HighlighterDirective } from './highlighter.directive';
 
-/* External modules. */
+// Internationalization i8 modules.
 import { TranslateModule} from '@ngx-translate/core';
+
+
+
 // For embedding my Resume.pdf
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-// For Analytics stuff.
+
+
+// For Google Analytics stuff
 import { Angulartics2Module } from 'angulartics2';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+
 
 
 import { ArtifactInterviewComponent } from './artifact-interview/artifact-interview.component';
-import { AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module'
+
+// To potentially have a MicroService. Some app that gets my repositories.
 import { GithubResolverService} from './services/github-resolver.service';
 
 

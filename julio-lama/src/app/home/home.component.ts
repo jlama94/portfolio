@@ -8,6 +8,9 @@ import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  row: string = "row";
+
   constructor(private router: Router,
               private googleAnalytics: Angulartics2GoogleAnalytics) {
     this.router.events.subscribe(event => {

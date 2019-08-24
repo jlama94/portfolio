@@ -2,8 +2,18 @@
   /*margin-top: 20px;*/
   /*margin-left: 20px;*/
 /*}*/
-mat-card {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
+/*mat-card {*/
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+  /*margin-top: 20px;*/
+/*}*/
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
