@@ -110,31 +110,11 @@
         <a mat-stroked-button color="warn" href="https://github.com/jlama94/MyChicagoPlanner">View on GitHub</a>
       </mat-card-actions>
     </mat-card>
-    <br/>
   </div>
 </div>
-<!-- This will render the DePaul team members component -->
+<!-- This will render the DePaul team members component. It becomes a child route of: /projects -->
 <router-outlet></router-outlet>
-<!-- Github Repositories fetched from the GitHub API. -->
-<!--<div class="container" fxLayout="column" fxLayoutGap="15px">-->
-<!--<div class="jumbotron">-->
-<!--<h4 align="center">GitHub Repositories</h4>-->
-<!--</div>-->
-<!--<div *ngFor="let repo of repoArray">-->
-<!--<mat-card fxFlexFill>-->
-<!--<mat-card-title>{{repo.name}}</mat-card-title>-->
-<!--<mat-card-subtitle>Description</mat-card-subtitle>-->
-<!--<mat-card-content>-->
-<!--<p>{{repo.description}}</p>-->
-<!--</mat-card-content>-->
-<!--<mat-card-actions>-->
-<!--<p><strong>Language:</strong> {{repo.language}}</p>-->
-<!--<p><a mat-stroked-button color="warn" href="{{repo.url}}">Repository URL</a></p>-->
-<!--</mat-card-actions>-->
-<!--</mat-card>-->
-<!--</div>-->
-<!--</div>-->
-<!--<br>-->
-<div align="center" style="padding-bottom: 20px">
-  <a mat-stroked-button color="primary" href="https://github.com/jlama94">Go to GitHub</a>
+
+<div id="visitGitHubDiv">
+  <a mat-stroked-button color="primary" href="https://github.com/jlama94"> Visit my GitHub</a>
 </div>

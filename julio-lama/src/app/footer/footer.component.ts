@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +8,7 @@ import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
 export class FooterComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

@@ -6,8 +6,8 @@
 .container {
   width: fit-content;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  height: 100%;
 }
 
 mat-card {

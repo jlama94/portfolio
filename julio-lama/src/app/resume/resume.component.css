@@ -1,15 +1,7 @@
 .container {
   margin-top: 20px;
-  margin-bottom: 20px;
-}
-img {
-  height: 30px;
-  width: 30px;
-}
-
-div {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+  text-align: center;
 }
 
 a {
@@ -17,12 +9,8 @@ a {
   color: mediumpurple;
 }
 
-address {
-  text-align: center;
-}
-
-#downloadMessage {
-  text-align: center;
-  /*width: fit-content;*/
-  background-color: lightyellow;
+#resumeDownloadDiv {
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 20px;
 }

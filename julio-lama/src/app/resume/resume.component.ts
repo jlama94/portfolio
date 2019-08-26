@@ -1,7 +1,6 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {PortfolioService} from "../services/portfolio.service";
 import {PDFProgressData} from "pdfjs-dist";
-import {ProgressAnimationEnd} from "@angular/material";
 
 
 @Component({
