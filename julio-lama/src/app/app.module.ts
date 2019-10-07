@@ -40,7 +40,6 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { WorkSamplesComponent } from './work-samples/work-samples.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutSiteComponent } from './about-site/about-site.component';
 import { ArtifactsDUComponent } from './artifacts-du/artifacts-du.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PortfolioService} from './services/portfolio.service';
@@ -78,7 +77,6 @@ import { GithubResolverService} from './services/github-resolver.service';
     ContactMeComponent,
     WorkSamplesComponent,
     FooterComponent,
-    AboutSiteComponent,
     MainNavigationComponent,
     ArtifactsDUComponent,
     PageNotFoundComponent,

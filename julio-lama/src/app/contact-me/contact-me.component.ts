@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm} from '@angular/forms';
 import { PortfolioService} from '../services/portfolio.service';
-import { Message } from './message';
 import { ErrorStateMatcher, MatDialog, MatDialogRef} from '@angular/material';
 
 
