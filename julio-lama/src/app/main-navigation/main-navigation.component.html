@@ -31,6 +31,9 @@
       <!--Instead of href, in Angular you use "routerLink"-->
       <!--<span><a routerLink="/home" style="color: white; text-decoration: none">Julio Lama</a></span>-->
     </mat-toolbar>
-    <ng-content></ng-content>
+
+    <!--Components inside the main navigation component -->
+    <router-outlet></router-outlet>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
